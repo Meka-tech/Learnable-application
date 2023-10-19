@@ -19,7 +19,7 @@ export default function LearningPath() {
   };
   const Dropdata = ["Frontend", "Backend", "Product design", "Web 3"];
   return (
-    <MainLayout pageTitle="Learning Path">
+    <MainLayout>
       <Body>
         <Title>Learning path</Title>
         <Subtitle>Select learning path</Subtitle>
@@ -60,11 +60,11 @@ const Body = styled.div`
   min-height: max-content;
 
   ${mq["lg"]} {
-    height: 85%;
+    height: 90%;
     width: 80%;
   }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
-    height: 85%;
+    height: 90%;
   }
 `;
 
@@ -123,7 +123,7 @@ const Buttons = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  width: 15rem;
+  width: 16rem;
   ${mq["lg"]} {
     width: 27.6rem;
   }

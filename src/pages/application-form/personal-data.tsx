@@ -18,7 +18,7 @@ export default function PersonalData() {
   };
 
   return (
-    <MainLayout pageTitle="Personal Data">
+    <MainLayout>
       <BackButton />
       <Body>
         <Title>Personal data</Title>

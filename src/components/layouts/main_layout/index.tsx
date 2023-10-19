@@ -5,9 +5,7 @@ import BGImage from "../../../images/Bg.png";
 import { mq } from "../../../responsive";
 
 interface IProps {
-  pageTitle?: string;
   children?: React.ReactNode;
-  goBack?: boolean;
 }
 
 export const MainLayout: FC<IProps> = ({ children }) => {

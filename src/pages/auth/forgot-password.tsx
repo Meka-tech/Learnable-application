@@ -1,18 +1,16 @@
 import {
   BackButton,
-  Checkbox,
   MainLayout,
   PrimaryButton,
   TextInput
 } from "../../components";
 import styled from "styled-components";
-import { useRef, useEffect } from "react";
 
 import { mq } from "../../responsive";
 
 export default function ForgotPassword() {
   return (
-    <MainLayout pageTitle="Forgot Password">
+    <MainLayout>
       <BackButton />
       <Body>
         <Title>Forgot Password</Title>

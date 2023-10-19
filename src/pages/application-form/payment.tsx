@@ -39,11 +39,11 @@ export default function Payment() {
   ];
 
   const [radioSelection, setRadioSelection] = useState(""); //Standard , NYSC , UpSkill
-  const [couponCode, setCouponCode] = useState(""); //Yes or No
+  const [couponCode, setCouponCode] = useState("No"); //Yes or No
 
   const [couponValue, setCouponValue] = useState("");
   return (
-    <MainLayout pageTitle="Payment">
+    <MainLayout>
       <Body>
         <Title>Payment</Title>
         <Subtitle>Make your payment</Subtitle>
@@ -315,7 +315,7 @@ const Buttons = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  width: 15rem;
+  width: 16rem;
   ${mq["lg"]} {
     width: 27.6rem;
   }

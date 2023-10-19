@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <MainLayout pageTitle="Login">
+    <MainLayout>
       <BackButton />
       <Body>
         <Title>Start your journey</Title>

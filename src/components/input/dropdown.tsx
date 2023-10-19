@@ -1,6 +1,7 @@
 import { FC, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Arrow from "../../images/arrow-down.png";
+import { mq } from "../../responsive";
 
 interface IProps {
   options: string[];
@@ -78,12 +79,21 @@ const Body = styled.div`
   padding: 0 2.4rem;
   z-index: 100;
   background-color: white;
+
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    height: 3.5rem;
+    padding: 0 2rem;
+    width: 80%;
+  }
 `;
 const BodyText = styled.h2`
   width: 95%;
   color: #667085;
   font-weight: 400;
   font-size: 1.8rem;
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    font-size: 1.4rem;
+  }
 `;
 interface IDrop {
   open: boolean;
@@ -111,6 +121,10 @@ const DropContainer = styled.div<IDrop>`
   padding-bottom: 1rem;
   position: relative;
   overflow: hidden;
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 80%;
+    margin-top: -2rem;
+  }
 `;
 const DropItem = styled.div`
   width: 100%;
@@ -119,11 +133,17 @@ const DropItem = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  /* border-radius: 30px; */
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    height: 3.5rem;
+    padding: 0 2rem;
+  }
   h3 {
     color: #475467;
     font-weight: 400;
     font-size: 1.8rem;
+    @media screen and (min-width: 1300px) and (max-width: 1600px) {
+      font-size: 1.4rem;
+    }
   }
   &:hover {
     background-color: #f4f6f8;
