@@ -33,8 +33,10 @@ export const Radio: FC<IProps> = ({
           />
         )}
         {hover && (
-          <InfoDiv>
-            <DialogBox>{categoryDetail}</DialogBox>
+          <InfoDiv right={(categoryName === "UpSkill").toString()}>
+            <DialogBox right={(categoryName === "UpSkill").toString()}>
+              {categoryDetail}
+            </DialogBox>
           </InfoDiv>
         )}
       </IconDiv>
@@ -94,8 +96,14 @@ const Icon = styled.img`
     margin-left: 0.8rem;
   }
 `;
-
-const InfoDiv = styled.div`
+interface IInfoDiv {
+  right?: string;
+}
+const InfoDiv = styled.div<IInfoDiv>`
   position: absolute;
   z-index: 10;
+  right: ${(props) => (props.right === "true" ? "0" : "")};
+  ${mq["lg"]} {
+    left: 0;
+  }
 `;

@@ -4,11 +4,12 @@ import { mq } from "../../responsive";
 
 interface IProps {
   children: React.ReactNode;
+  right?: string;
 }
-export const DialogBox: FC<IProps> = ({ children }) => {
+export const DialogBox: FC<IProps> = ({ children, right = "false" }) => {
   return (
     <Container>
-      <Triangle />
+      <Triangle right={right} />
 
       <Body>
         <Text>{children}</Text>
@@ -17,17 +18,26 @@ export const DialogBox: FC<IProps> = ({ children }) => {
   );
 };
 
-const Container = styled.div``;
-
-const Triangle = styled.div`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+interface ITriangle {
+  right: string;
+}
+const Triangle = styled.div<ITriangle>`
   width: 0;
   height: 0;
   border-left: 15px solid white;
   border-right: 15px solid white;
   border-bottom: 15px solid #faf7f7;
+  align-self: ${(props) => (props.right === "true" ? "flex-end" : " ")};
+  ${mq["lg"]} {
+    align-self: flex-start;
+  }
 `;
 const Body = styled.div`
-  background-color: #fffdfd;
+  background-color: white;
   padding: 1rem;
   border-radius: 16px;
   width: 25rem;
