@@ -1,11 +1,4 @@
-import {
-  ClassAttributes,
-  ElementType,
-  FC,
-  InputHTMLAttributes,
-  JSX,
-  useState
-} from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
 import { mq } from "../../responsive";
 import EyeOpen from "../../images/eyeOpen.png";
@@ -17,7 +10,7 @@ import {
   StyledInputLabel
 } from ".";
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLInputElement> {
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   inputlabel: string;
 }
 export const PasswordInput: FC<IProps> = ({ inputlabel, ...rest }) => {
@@ -26,7 +19,7 @@ export const PasswordInput: FC<IProps> = ({ inputlabel, ...rest }) => {
   return (
     <StyledInputContainer>
       <StyledInputLabel>{inputlabel}</StyledInputLabel>
-      <StyledInputElementContainer focused={focused}>
+      <StyledInputElementContainer focused={focused.toString()}>
         <ExtendInput
           type={showPassword ? "text" : "password"}
           {...rest}

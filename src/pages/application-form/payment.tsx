@@ -275,7 +275,7 @@ const CouponInput = styled.div`
 `;
 
 const DisclaimerDiv = styled.div``;
-const Disclaimer = styled.p`
+const Disclaimer = styled.div`
   h2 {
     color: rgba(225, 63, 41, 1);
     font-size: 1.4rem;
