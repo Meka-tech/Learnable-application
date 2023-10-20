@@ -21,10 +21,12 @@ export default function Home() {
           <TextInput
             inputlabel="Email address"
             placeholder="Enter your Email"
+            autoComplete="on"
           />
           <PasswordInput
             inputlabel="Password"
             placeholder="Enter your password"
+            autoComplete="on"
           />
           <BelowInputs>
             <RemeberMe>
