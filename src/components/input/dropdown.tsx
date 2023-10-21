@@ -1,7 +1,6 @@
 import { FC, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Arrow from "../../images/arrow-down.png";
-import { mq } from "../../responsive";
 
 interface IProps {
   options: string[];
