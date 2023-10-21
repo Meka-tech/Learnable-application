@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import styled from "styled-components";
-import { mq } from "../../responsive";
 import EyeOpen from "../../images/eyeOpen.png";
 import EyeClose from "../../images/eyeClose.png";
 import {
