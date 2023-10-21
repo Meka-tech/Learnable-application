@@ -8,9 +8,10 @@ import {
 } from "../../components";
 import styled from "styled-components";
 import { mq } from "../../responsive";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <MainLayout>
       <BackButton />
@@ -41,7 +42,9 @@ export default function Home() {
             <PrimaryButton
               text="Start journey"
               type="submit"
-              onClick={() => {}}
+              onClick={() => {
+                navigate("/application-form/personal-data");
+              }}
             />
           </ButtonContainer>
         </Form>
