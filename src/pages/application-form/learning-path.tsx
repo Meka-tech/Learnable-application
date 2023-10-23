@@ -64,7 +64,8 @@ const Body = styled.div`
     width: 80%;
   }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
-    height: 90%;
+    width: 100%;
+    height: 92%;
   }
 `;
 

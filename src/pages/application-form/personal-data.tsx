@@ -44,14 +44,16 @@ export default function PersonalData() {
             type="email"
           />
         </FormGrid>
-        <ButtonContainer>
-          <PrimaryButton
-            text="Next"
-            arrow={true}
-            arrowPosition="right"
-            onClick={OnClickNext}
-          />
-        </ButtonContainer>
+        <Buttons>
+          <ButtonContainer>
+            <PrimaryButton
+              text="Next"
+              arrow={true}
+              arrowPosition="right"
+              onClick={OnClickNext}
+            />
+          </ButtonContainer>
+        </Buttons>
       </Body>
     </MainLayout>
   );
@@ -60,15 +62,16 @@ export default function PersonalData() {
 const Body = styled.div`
   margin-top: 2rem;
   width: 100%;
-  height: auto;
   position: relative;
   min-height: max-content;
+  height: calc(90% - 2.4rem);
   ${mq["lg"]} {
-    width: max-content;
-    height: 80%;
+    width: 80%;
+    height: calc(89.8% - 5.6rem); //height of back button
   }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
-    height: 85%;
+    width: 100%;
+    height: calc(91.8% - 4rem); //height of back button
   }
 `;
 
@@ -114,15 +117,19 @@ const FormGrid = styled.div`
   }
 `;
 
+const Buttons = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+`;
+
 const ButtonContainer = styled.div`
-  width: 15rem;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  position: relative;
+  width: 16rem;
   ${mq["lg"]} {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 27.6rem;
   }
 `;

@@ -14,7 +14,7 @@ import { useState } from "react";
 export default function Payment() {
   const navigate = useNavigate();
   const OnClickNext = () => {
-    navigate("/application-form/learning-path");
+    // navigate("/application-form/learning-path");
   };
   const OnClickPrevious = () => {
     navigate(-1);
@@ -24,7 +24,7 @@ export default function Payment() {
     {
       catname: "Standard",
       catDetail:
-        "This category is for our special applicants who’re registering through the normal process."
+        "This category is for applicants who’re registering through the normal process."
     },
     {
       catname: "UpSkill",
@@ -175,12 +175,13 @@ const Body = styled.div`
   height: 90%;
   position: relative;
   min-height: max-content;
-
+ 
   ${mq["lg"]} {
     height: 90%;
     width: 80%;
   }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
+    width: 100%;
     height: 92%;
   }
 `;
